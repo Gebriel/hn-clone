@@ -1,8 +1,10 @@
 <template>
   <div>
-    <header class="shadow-sm bg-white">
-      <nav class="container mx-auto p-4 flex justify-between">
-        <NuxtLink to="/" class="font-bold">Hacker News</NuxtLink>
+    <header class="shadow-sm bg-orange-500">
+      <nav class="container mx-auto p-3 flex justify-between">
+        <NuxtLink to="/" class="font-bold text-lg text-white"
+          >Hacker News</NuxtLink
+        >
         <ul class="flex gap-4">
           <li><NuxtLink to="/">Top</NuxtLink></li>
           <li><NuxtLink to="/new">New</NuxtLink></li>
@@ -21,7 +23,7 @@
 </template>
 
 <style scoped>
-.router-link-exact-active {
-  color: #12b488;
-}
+/* .router-link-exact-active {
+  color: black;
+} */
 </style>
