@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="grid grid-cols-4 gap-5">
-      <div v-for="story in stories">
-        <div>{{ story }}</div>
+    <div>
+      <div class="shadow-sm bg-white" v-for="story in stories">
+        <div class="container mx-auto p-4 m-4">{{ story.title }}</div>
       </div>
     </div>
   </div>
@@ -10,11 +10,17 @@
 
 <script setup>
 // fetch the products
-const { data: stories } = await useFetch(
+const { data } = await useFetch(
   'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
 );
-
-console.log(stories.value);
+let stories = [];
+data.value.forEach(async (storyId) => {
+  const { data: story } = await useFetch(
+    `https://hacker-news.firebaseio.com/v0/item/${storyId}.json?print=pretty`
+  );
+  stories.push(story.value);
+});
+console.log(stories);
 </script>
 
 <style lang="scss" scoped></style>
