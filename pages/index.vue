@@ -1,26 +1,45 @@
 <template>
   <div>
-    <div>
-      <div class="shadow-sm bg-white" v-for="story in stories">
-        <div class="container mx-auto p-4 mb-4">{{ story.title }}</div>
-      </div>
+    <div class="shadow-sm bg-white" v-for="story in stories">
+      <div class="container mx-auto p-4 mb-4">{{ story.title }}</div>
     </div>
   </div>
 </template>
 
 <script setup>
-// fetch the products
-const { data } = await useFetch(
+const stories = ref([]);
+
+// fetch the feeds
+const { data: feeds } = await useFetch(
   'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
 );
-let stories = [];
-data.value.forEach(async (storyId) => {
-  const { data: story } = await useFetch(
-    `https://hacker-news.firebaseio.com/v0/item/${storyId}.json?print=pretty`
-  );
-  stories.push(story.value);
-});
-console.log(stories);
+
+feeds.value.length = 10;
+
+Promise.all(
+  feeds.value.map((e) =>
+    useFetch(
+      `https://hacker-news.firebaseio.com/v0/item/${e}.json?print=pretty`,
+      { key: e.toString() }
+    )
+  )
+).then((responses) =>
+  responses.forEach((r) => stories.value.push(r.data.value))
+);
+
+// watchEffect(
+//   feeds,
+//   Promise.all(
+//     feeds.value.map((e) =>
+//       useFetch(
+//         `https://hacker-news.firebaseio.com/v0/item/${e}.json?print=pretty`,
+//         { key: e.toString() }
+//       )
+//     )
+//   ).then((responses) =>
+//     responses.forEach((r) => stories.value.push(r.data.value))
+//   )
+// );
 </script>
 
 <style lang="scss" scoped></style>
