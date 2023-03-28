@@ -2,7 +2,7 @@
   <div>
     <div>
       <div class="shadow-sm bg-white" v-for="story in stories">
-        <div class="container mx-auto p-4 m-4">{{ story.title }}</div>
+        <div class="container mx-auto p-4 mb-4">{{ story.title }}</div>
       </div>
     </div>
   </div>
