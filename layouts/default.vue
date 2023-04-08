@@ -1,7 +1,7 @@
 <template>
   <div>
-    <header class="shadow-sm bg-orange-500">
-      <nav class="container mx-auto p-3 flex justify-between">
+    <header class="shadow-lg bg-orange-500 header">
+      <nav class="container mx-auto p-4 flex justify-between">
         <NuxtLink to="/" class="font-bold text-lg text-white"
           >Hacker News</NuxtLink
         >
@@ -26,4 +26,11 @@
 /* .router-link-exact-active {
   color: black;
 } */
+body {
+  background-color: #fbf8f1;
+}
+
+.header {
+  background-color: #ed702d;
+}
 </style>
