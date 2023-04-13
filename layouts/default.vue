@@ -26,4 +26,7 @@
 /* .router-link-exact-active {
   color: black;
 } */
+.container {
+  max-width: 1024px;
+}
 </style>
