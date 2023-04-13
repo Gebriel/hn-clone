@@ -3,11 +3,27 @@
     <div class="flex justify-between gap-2">
       <div class="flex flex-col gap-4 col-span-2">
         <div class="flex overflow-ellipsis">
-          <a class="font-semibold" :href="story.url">{{ story.title }}</a>
+          <div class="flex flex-col">
+            <div>
+              <a class="font-semibold" :href="story.url">{{ story.title }}</a>
+            </div>
+            <div class="md:hidden">
+              <div class="flex text-slate-500">
+                <a :href="story.url" target="_blank">{{
+                  getHostName(story.url)
+                }}</a>
+                <a :href="story.url" target="_blank"
+                  ><Icon name="ic:outline-launch"
+                /></a>
+              </div>
+            </div>
+          </div>
           <div class="text-slate-500 mx-1 text-sm">
             <div class="flex">
+              (
               <div><Icon name="ic:baseline-person-outline" /></div>
-              <div class="flex ml-1 mt-0.5">({{ story.by }})</div>
+              <div class="flex ml-1 mt-0.5">{{ story.by }}</div>
+              )
             </div>
           </div>
         </div>
