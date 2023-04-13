@@ -1,6 +1,21 @@
 <template>
-  <div class="container shadow-sm bg-white mx-auto p-4 mb-4">
-    <p>{{ story }}</p>
+  <div class="container bg-white mx-auto p-4 mb-4 rounded-lg flex">
+    <div class="flex-auto w-64">
+      <div class="flex flex-col">
+        <div>{{ story.title }}</div>
+        <div class="flex">
+          <div class="text-slate-500">{{ story.score }} points</div>
+          <div class="text-slate-500 mx-4">{{ story.by }}</div>
+          <div class="text-slate-500 mx-4">
+            {{ story.descendants }} comments
+          </div>
+          <div class="text-slate-500 mx-4">{{ story.time }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-auto w-32">
+      <div>{{ story.url }}</div>
+    </div>
   </div>
 </template>
 
