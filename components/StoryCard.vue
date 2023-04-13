@@ -45,7 +45,7 @@
 
       <div class="hidden md:block">
         <div class="flex text-slate-500">
-          <a :href="story.url">{{ getHostName(story.url) }}</a>
+          <a :href="story.url" target="_blank">{{ getHostName(story.url) }}</a>
           <a :href="story.url" target="_blank"
             ><Icon name="ic:outline-launch"
           /></a>
