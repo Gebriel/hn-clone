@@ -2,9 +2,14 @@
   <div>
     <header class="shadow-lg bg-orange-500 header">
       <nav class="container mx-auto p-4 flex justify-between">
-        <NuxtLink to="/" class="font-bold text-lg text-white"
-          >Hacker News</NuxtLink
-        >
+        <div class="flex justify-center gap-3">
+          <NuxtLink to="/"
+            ><img class="h-7 w-7" src="~/assets/hacker-news-black-white.svg"
+          /></NuxtLink>
+          <NuxtLink to="/" class="font-bold text-lg text-white hidden md:block"
+            >Hacker News</NuxtLink
+          >
+        </div>
         <ul class="flex gap-4">
           <li><NuxtLink to="/">Top</NuxtLink></li>
           <li><NuxtLink to="/new">New</NuxtLink></li>
