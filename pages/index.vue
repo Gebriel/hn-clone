@@ -28,4 +28,8 @@ stories.value.length = 20; // delete this later only here for development to lim
 // );
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+body {
+  background-color: #fbf0ea;
+}
+</style>
