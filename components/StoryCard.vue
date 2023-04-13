@@ -1,23 +1,32 @@
 <template>
   <div class="container bg-white mx-auto p-4 mb-4 rounded-lg flex">
     <div class="flex-auto w-64">
-      <div class="flex flex-col">
+      <div class="flex flex-col gap-2">
         <div>{{ story.title }}</div>
         <div class="flex">
           <div class="text-slate-500">
-            <Icon name="mdi-light:trophy" />
-            {{ story.score }} points
+            <div class="flex">
+              <div><Icon name="mdi:medal-outline" /></div>
+              <div class="ml-1 mt-0.5">{{ story.score }} points</div>
+            </div>
           </div>
-          <div class="text-slate-500 mx-4">
-            <Icon name="mdi-light:account" />
-            {{ story.by }}
+          <div class="text-slate-500 mx-5">
+            <div class="flex">
+              <div><Icon name="ic:baseline-person-outline" /></div>
+              <div class="ml-1 mt-0.5">{{ story.by }}</div>
+            </div>
           </div>
-          <div class="text-slate-500 mx-4">
-            <Icon name="mdi-light:message-text" />{{ story.descendants }}
-            comments
+          <div class="text-slate-500 mx-5">
+            <div class="flex">
+              <div><Icon name="ic:outline-mode-comment" /></div>
+              <div class="ml-1 mt-0.5">{{ story.descendants }} comments</div>
+            </div>
           </div>
-          <div class="text-slate-500 mx-4">
-            <Icon name="mdi-light:clock" />{{ story.time }}
+          <div class="text-slate-500 mx-5">
+            <div class="flex">
+              <div><Icon name="ic:outline-access-time" /></div>
+              <div class="ml-1 mt-0.5">{{ story.time }}</div>
+            </div>
           </div>
         </div>
       </div>
