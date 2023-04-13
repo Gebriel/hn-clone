@@ -26,11 +26,4 @@
 /* .router-link-exact-active {
   color: black;
 } */
-body {
-  background-color: #fbf8f1;
-}
-
-.header {
-  background-color: #ed702d;
-}
 </style>

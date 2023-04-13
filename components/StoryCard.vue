@@ -4,12 +4,21 @@
       <div class="flex flex-col">
         <div>{{ story.title }}</div>
         <div class="flex">
-          <div class="text-slate-500">{{ story.score }} points</div>
-          <div class="text-slate-500 mx-4">{{ story.by }}</div>
-          <div class="text-slate-500 mx-4">
-            {{ story.descendants }} comments
+          <div class="text-slate-500">
+            <Icon name="mdi-light:trophy" />
+            {{ story.score }} points
           </div>
-          <div class="text-slate-500 mx-4">{{ story.time }}</div>
+          <div class="text-slate-500 mx-4">
+            <Icon name="mdi-light:account" />
+            {{ story.by }}
+          </div>
+          <div class="text-slate-500 mx-4">
+            <Icon name="mdi-light:message-text" />{{ story.descendants }}
+            comments
+          </div>
+          <div class="text-slate-500 mx-4">
+            <Icon name="mdi-light:clock" />{{ story.time }}
+          </div>
         </div>
       </div>
     </div>
