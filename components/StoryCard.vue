@@ -2,10 +2,8 @@
   <div class="container bg-white mx-auto p-4 mb-4 rounded-lg">
     <div class="flex justify-between gap-2">
       <div class="flex flex-col gap-4 col-span-2">
-        <div class="font-semibold">
-          <a class="truncate md:text-clip break-all" :href="story.url">{{
-            story.title
-          }}</a>
+        <div class="font-semibold overflow-ellipsis">
+          <a class="" :href="story.url">{{ story.title }}</a>
         </div>
 
         <div class="flex justify-start gap-4">
