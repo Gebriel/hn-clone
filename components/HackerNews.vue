@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-2">
+  <div class="container flex gap-2">
     <NuxtLink to="/"
       ><img class="h-8 w-8" src="~/assets/hacker-news-black-white.svg"
     /></NuxtLink>

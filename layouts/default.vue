@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="header">
+    <header class="">
       <nav class="mx-auto p-4 shadow">
         <div class="flex items-center justify-between">
           <!-- Header logo Desktop-->
@@ -31,7 +31,7 @@
 
           <!-- Navbar -->
           <div class="hidden md:block">
-            <ul class="flex space-x-8 text-sm font-sans pt-0">
+            <ul class="flex space-x-8 text-sm font-sans">
               <li><NuxtLink to="/">Top</NuxtLink></li>
               <li><NuxtLink to="/new">New</NuxtLink></li>
               <li><NuxtLink to="/best">Best</NuxtLink></li>
@@ -187,9 +187,12 @@ export default {
 </script>
 
 <style scoped>
-/* .router-link-exact-active {
-  color: black;
-} */
+a.router-link-active {
+  color: #fbf0ea;
+  background-color: black;
+  padding: 5px;
+  border-radius: 20%;
+}
 .container {
   max-width: 1024px;
 }
