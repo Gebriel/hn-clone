@@ -196,4 +196,7 @@ a.router-link-active {
 .container {
   max-width: 1024px;
 }
+.header {
+  background-color: #ed702d;
+}
 </style>
