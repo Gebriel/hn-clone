@@ -13,7 +13,7 @@
 const { data: stories } = await useFetch(
   'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
 );
-console.log(stories);
+//console.log(stories);
 stories.value.length = 20; // delete this later only here for development to limit the number of stories
 
 // Promise.all(

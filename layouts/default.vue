@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="header">
-      <nav class="mx-auto p-4 shadow-sm">
+      <nav class="mx-auto p-4 shadow">
         <div class="flex items-center justify-between">
           <!-- Header logo Desktop-->
           <div class="hidden md:block">
