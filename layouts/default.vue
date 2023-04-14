@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="">
+    <header class="w-full header">
       <nav class="mx-auto p-4 shadow">
         <div class="flex items-center justify-between">
           <!-- Header logo Desktop-->
