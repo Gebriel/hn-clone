@@ -1,5 +1,6 @@
 <template>
   <div class="container bg-white mx-auto p-4 mb-4 rounded-lg">
+    <NuxtLoadingIndicator />
     <div class="flex justify-between gap-2">
       <div class="flex flex-col gap-4 col-span-2">
         <div class="flex overflow-ellipsis">
