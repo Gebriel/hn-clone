@@ -89,7 +89,7 @@
 
             <span
               @click="isOpen = false"
-              class="flex w-full items-center pb-4 border-b"
+              class="flex w-full items-center pb-6 border-b"
             >
               <HackerNews />
             </span>
