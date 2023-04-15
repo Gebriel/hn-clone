@@ -6,7 +6,9 @@
         <div class="flex overflow-ellipsis">
           <div class="flex flex-col">
             <div>
-              <a class="font-semibold" :href="story.url">{{ story.title }}</a>
+              <NuxtLink :to="`/story/${story.id}`" class="flex">
+                <p class="font-semibold">{{ story.title }}</p>
+              </NuxtLink>
             </div>
             <div class="md:hidden" v-if="story.url">
               <div class="flex text-slate-500">
