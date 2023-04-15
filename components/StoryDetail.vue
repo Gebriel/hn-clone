@@ -35,24 +35,18 @@
               <div><Icon name="mdi:medal-outline" /></div>
               <div class="flex ml-1 mt-0.5">
                 {{ story.score }}
-                <!-- <div class="hidden md:block ml-1">points</div> -->
               </div>
             </div>
           </div>
-          <!-- <div class="text-slate-500 mx-1 text-sm">
-            <div class="flex">
-              <div><Icon name="ic:baseline-person-outline" /></div>
-              <div class="flex ml-1 mt-0.5">{{ story.by }}</div>
-            </div>
-          </div> -->
+
           <div class="text-slate-500 mx-1 text-sm" v-if="story.descendants">
             <div class="flex">
-              <NuxtLink :to="`/story/${story.id}`" class="flex">
-                <div><Icon name="ic:outline-mode-comment" /></div>
-                <div class="flex ml-1 mt-0.5">
-                  <p class="">{{ story.descendants }}</p>
-                </div>
-              </NuxtLink>
+              <!-- <NuxtLink :to="`/story/${story.id}`" class="flex"> -->
+              <div><Icon name="ic:outline-mode-comment" /></div>
+              <div class="flex ml-1 mt-0.5">
+                <p class="">{{ story.descendants }}</p>
+              </div>
+              <!-- </NuxtLink> -->
             </div>
           </div>
           <div class="text-slate-500 mx-1 text-sm" v-if="story.time">
@@ -83,10 +77,7 @@
 <script setup>
 import { useTimeAgo } from '@vueuse/core';
 
-const { storyId } = defineProps(['storyId']);
-const { data: story } = await useFetch(
-  `https://hacker-news.firebaseio.com/v0/item/${storyId}.json?print=pretty`
-);
+const { story } = defineProps(['story']);
 
 const getHostName = (url) => {
   try {
