@@ -3,7 +3,7 @@
     <div>
       <StoryDetail :story="story" />
     </div>
-    <div v-for="kidId in story.kids">
+    <div v-if="story.kids" v-for="kidId in story.kids">
       <Comment :kidId="kidId" />
     </div>
   </div>
