@@ -12,7 +12,7 @@
       </div>
       <div class="flex flex-col overflow-ellipsis">
         <div>
-          <div class="overflow-x-scroll" v-html="comment.text"></div>
+          <div class="overflow-auto" v-html="comment.text"></div>
         </div>
       </div>
       <div class="text-slate-500 text-sm pb-2" v-if="comment.time">
