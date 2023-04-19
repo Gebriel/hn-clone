@@ -1,11 +1,11 @@
 <template>
   <div
-    class="container bg-white mx-auto rounded-lg px-4 pb-4 m-4"
+    class="container bg-white mx-auto rounded-lg px-4 m-4"
     v-if="comment.text"
   >
     <div class="flex flex-col">
       <div class="flex flex-col text-sm overflow-ellipsis">
-        <div class="text-slate-500 mb-2" v-if="comment.by">
+        <div class="text-slate-500 pt-2" v-if="comment.by">
           <div class="flex">
             <div><Icon name="ic:baseline-person-outline" /></div>
             <div class="">{{ comment.by }}</div>
@@ -16,7 +16,7 @@
             <p class="font-normal" v-html="comment.text"></p>
           </div>
         </div>
-        <div class="text-slate-500 mx-1 text-sm" v-if="comment.time">
+        <div class="text-slate-500 text-sm pb-2" v-if="comment.time">
           <div class="flex">
             <div><Icon name="ic:outline-access-time" /></div>
             <p class="flex ml-1 mt-0.5">
