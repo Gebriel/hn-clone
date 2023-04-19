@@ -1,5 +1,9 @@
 <template>
   <div>
+    <Head>
+      <Title>HackerNews</Title>
+      <Meta name="description" :content="story.title" />
+    </Head>
     <div>
       <StoryDetail :story="story" />
     </div>

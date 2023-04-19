@@ -1,5 +1,9 @@
 <template>
   <div>
+    <Head>
+      <Title>Hacker News</Title>
+      <Meta name="description" content="Nuxt 3 Frontend for HackerNews" />
+    </Head>
     <header class="w-full header">
       <nav class="mx-auto p-4 shadow">
         <div class="flex items-center justify-between">

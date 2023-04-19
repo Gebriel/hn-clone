@@ -6,7 +6,7 @@
     <div class="flex flex-col text-sm overflow-ellipsis">
       <div class="text-slate-500 pt-2" v-if="comment.by">
         <div class="flex">
-          <!-- <div><Icon name="ic:baseline-person-outline" /></div> -->
+          <div><Icon name="ic:baseline-person-outline" /></div>
           <div class="">{{ comment.by }}</div>
         </div>
       </div>
@@ -56,7 +56,6 @@ const getHostName = (url) => {
 
 const getTime = (time) => {
   const timeAgo = useTimeAgo(time * 1000);
-  console.log(timeAgo);
   return timeAgo;
 };
 </script>
