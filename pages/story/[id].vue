@@ -3,7 +3,7 @@
     <div>
       <StoryDetail :story="story" />
     </div>
-    <div v-if="story.kids" v-for="kidId in story.kids">
+    <div v-if="story.kids.length" v-for="kidId in story.kids">
       <Comment :kidId="kidId" />
     </div>
   </div>
@@ -13,8 +13,6 @@
 const { id } = useRoute().params;
 const uri = `https://hacker-news.firebaseio.com/v0/item/${id}.json?print=pretty`;
 const { data: story } = await useFetch(uri, { key: id });
-// const noOfComments = story.value.descendants;
-// console.log(noOfComments);
 </script>
 
 <style>

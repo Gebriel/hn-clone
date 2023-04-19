@@ -37,16 +37,10 @@
               <div><Icon name="mdi:medal-outline" /></div>
               <div class="flex ml-1 mt-0.5">
                 {{ story.score }}
-                <!-- <div class="hidden md:block ml-1">points</div> -->
               </div>
             </div>
           </div>
-          <!-- <div class="text-slate-500 mx-1 text-sm">
-            <div class="flex">
-              <div><Icon name="ic:baseline-person-outline" /></div>
-              <div class="flex ml-1 mt-0.5">{{ story.by }}</div>
-            </div>
-          </div> -->
+
           <div class="text-slate-500 mx-1 text-sm" v-if="story.descendants">
             <div class="flex">
               <NuxtLink :to="`/story/${story.id}`" class="flex">
@@ -61,7 +55,7 @@
             <div class="flex">
               <div><Icon name="ic:outline-access-time" /></div>
               <p class="flex ml-1 mt-0.5">
-                {{ getTime(story.time) }}
+                {{ getTime(story.time).value }}
               </p>
             </div>
           </div>

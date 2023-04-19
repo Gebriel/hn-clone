@@ -3,31 +3,29 @@
     class="container bg-white mx-auto rounded-lg px-4 m-4"
     v-if="comment.text"
   >
-    <div class="flex flex-col">
-      <div class="flex flex-col text-sm overflow-ellipsis">
-        <div class="text-slate-500 pt-2" v-if="comment.by">
-          <div class="flex">
-            <div><Icon name="ic:baseline-person-outline" /></div>
-            <div class="">{{ comment.by }}</div>
-          </div>
+    <div class="flex flex-col text-sm overflow-ellipsis">
+      <div class="text-slate-500 pt-2" v-if="comment.by">
+        <div class="flex">
+          <!-- <div><Icon name="ic:baseline-person-outline" /></div> -->
+          <div class="">{{ comment.by }}</div>
         </div>
-        <div class="flex flex-col">
-          <div v-if="comment.text">
-            <p class="font-normal" v-html="comment.text"></p>
-          </div>
+      </div>
+      <div class="flex flex-col">
+        <div>
+          <p class="font-normal" v-html="comment.text"></p>
         </div>
-        <div class="text-slate-500 text-sm pb-2" v-if="comment.time">
-          <div class="flex">
-            <div><Icon name="ic:outline-access-time" /></div>
-            <p class="flex ml-1 mt-0.5">
-              {{ getTime(comment.time) }}
-            </p>
-          </div>
+      </div>
+      <div class="text-slate-500 text-sm pb-2" v-if="comment.time">
+        <div class="flex">
+          <div><Icon name="ic:outline-access-time" /></div>
+          <p class="flex ml-1 mt-0.5">
+            {{ getTime(comment.time).value }}
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="text-sm" v-if="comment.kids">
+    <div class="" v-if="comment.kids">
       <div v-for="kidId in comment.kids">
         <Comment :kidId="kidId" />
       </div>
@@ -58,6 +56,7 @@ const getHostName = (url) => {
 
 const getTime = (time) => {
   const timeAgo = useTimeAgo(time * 1000);
+  console.log(timeAgo);
   return timeAgo;
 };
 </script>
