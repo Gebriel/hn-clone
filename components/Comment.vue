@@ -25,7 +25,7 @@
           </div>
         </div>
 
-        <div class="" v-if="comment.kids">
+        <div class="text-sm" v-if="comment.kids">
           <div v-for="kidId in comment.kids">
             <Comment :kidId="kidId" />
           </div>
