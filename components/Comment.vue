@@ -3,16 +3,16 @@
     class="container bg-white mx-auto rounded-lg px-4 m-4"
     v-if="comment.text"
   >
-    <div class="flex flex-col text-sm overflow-ellipsis">
+    <div class="flex flex-col text-sm">
       <div class="text-slate-500 pt-2" v-if="comment.by">
         <div class="flex">
           <div><Icon name="ic:baseline-person-outline" /></div>
           <div class="">{{ comment.by }}</div>
         </div>
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col overflow-ellipsis">
         <div>
-          <p class="font-normal" v-html="comment.text"></p>
+          <div class="overflow-x-scroll" v-html="comment.text"></div>
         </div>
       </div>
       <div class="text-slate-500 text-sm pb-2" v-if="comment.time">
