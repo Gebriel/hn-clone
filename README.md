@@ -1,42 +1,19 @@
-# Nuxt 3 Minimal Starter
+# HackerNews Nuxt 3 App
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This Nuxt 3 application fetches and displays news articles from the HackerNews API.
 
-## Setup
+![App Thumbnail 1](./thumb1.png) ![App Thumbnail 2](./thumb2.png)
 
-Make sure to install the dependencies:
+## Description
+
+A simple and responsive Nuxt 3 app that allows users to read the latest news articles from HackerNews. The application leverages the HackerNews API to fetch data, providing a clean and user-friendly interface for browsing news content.
+
+## Getting Started
+
+To get started with the app, follow these steps:
 
 ```bash
-# yarn
-yarn install
-
-# npm
+git clone https://github.com/Gebriel/hn-clone.git
+cd hn-clone
 npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
 npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
